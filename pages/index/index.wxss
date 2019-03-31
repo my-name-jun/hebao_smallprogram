@@ -1,0 +1,72 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top_image
+{
+  position: absolute;
+  left: 315rpx;
+  top: 95rpx;
+  width: 113rpx;
+  height: 115rpx;
+}
+.top_title
+{
+  font-size: 30rpx;
+  position: absolute;
+  left: 225rpx;
+  top: 245rpx;
+}
+.price
+{
+  font-size: 100rpx;
+  position: absolute;
+  left: 230rpx;
+  top: 380rpx;
+}
+.unit
+{
+  font-size: 30rpx;
+  position: relative;
+  left: 25rpx;
+}
+.content
+{
+  font-size: 28rpx;
+  position: absolute;
+  top: 530rpx;
+  left: 155rpx;
+}
+.submit_button
+{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjsAAABYCAYAAAATKTaGAAAAAklEQVR4AewaftIAAALdSURBVO3Bsa4YdBnA0V/jZ42JpKsKY2PY1cG3KAmYuJdNB028tT4AucBwXZzqE3hBUJPO7mhMnBklPIAu1uDfGowl4AP0fjnnzP3Lf/V/3K7uVfeq71XfrG4HAPD8+Hv11+rP1XvVbx89uPWkz5m+6JXqrepuAADPr69VL1cvVz+oPnz9zfPg0YNbv+kzpme+VL1RXQQAcPPcrd59/c3zVvXzRw9ufdJTc/qfN6qLAAButos+9aCnptN/vFpdBACww8X9y/PBr352652pbldXAQDs8ov7l+d3U+e16qUAAHZ5sfr+VPcCANjp3pz6bgAAO31nOn09AICdvjHVVwIA2On2BACw2JwAAPaaTgAAa02dAAC2mgAAFpsTAMBe0wkAYK0JAGCxOQEA7DV1AgDYajoBAKw1JwCAvSYAgMWmEwDAWnMCANhr6gQAsNUEALDYnBMAwFoTAMBiEwDAYnNOAABrTZ0AALaaEwDAXtMJAGCtCQBgsTkBAOw1nRMAwFYTAMBicwIA2Gs6AQCsNScAgL2mTgAAW00nAIC15gQAsNd0AgBYa04AAHtNnQAAtppOAABrzQkAYK8JAGCx6QQAsNacTgAAW00AAIvNOQEArDUBACw2AQAsNuecAAC2mgAAFpsAABabcwIAWGsCAFhsTgAAe02dAAC2mk4AAGvNCQBgrwkAYLHpBACw1pwAAPaaOgEAbDWdAADWmhMAwF4TAMBiEwDAYtMJAGCtOZ0AALaaAAAWmwAAFptOf6teCABgnydz6uPqhQAA9vl4qr9U3woAYJ8/TvV+9WoAAPu8P9V1dVm9FADAHh9V13POeVL9pPp1AAB7/Pjx1Z1/TJ+6rt6ufhoAwM339uOrO9c9NT3zsPpq9cMAAG6uX1YP+6/pmU+qH1V/qC6ruwEA3BwfVg8fX915p8+Yvujd6vfVa9Ur1berF6svBwDw/Phn9VH1p+q96vrx1Z0nfc6/AajtijiD0CgHAAAAAElFTkSuQmCC') no-repeat;
+  background-size: 100%;
+  width: 570rpx;
+  height: 87rpx;
+  position: absolute;
+  left: 90rpx;
+  top: 620rpx;
+  font-size: 36rpx;
+  text-align: center;
+  padding-top:20rpx;
+  color: white; 
+}
+.footer_words
+{
+  font-size: 30rpx;
+  position: absolute;
+  left: 125rpx;
+  bottom: 135rpx;
+}
+.number
+{
+  color: #5D83FF;
+}
+.line
+{
+  margin: 0 25rpx;
+  color: #DADDEB;
+}
