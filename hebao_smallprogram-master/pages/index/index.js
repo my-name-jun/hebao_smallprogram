@@ -7,10 +7,28 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    year:"2018",
+    month:"05",
+    day:"02",
+    money:"800,086.00",
+    number:"10988"
   },
   //事件处理函数
   bindViewTap: function() {
+    wx.request({
+      url: 'http://office.5ftech.com:30001/insurance/hbj/open', // 仅为示例，并非真实的接口地址
+      data: {
+
+      },
+      method: 'post',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res.data);
+      }
+    });
     wx.navigateTo({
       url: '../logs/logs'
     })
@@ -51,18 +69,44 @@ Page({
       hasUserInfo: true
     })
   },
-  test:function(e)
+  load_data:function(data)
   {
+    console.log(data.data);
+    let date = new Date(data.data.date);
+    let month1 = date.getMonth()+1;
+    let day1 = date.getDay();
+    let money1 = data.data.money.toString();
+    let len = money1.length;
+    let t = len%3;
+    let money2 = money1.substring(0, t) + ",";
+    for(let i=0;i<(len-1)/3;i++)
+    {
+      money2 = money2 +  money1.substring(t, t+3) + ",";
+      t = t+3;
+    }
+    money1 = money2.substring(0,money2.length-1) + ".00";
+    console.log(money1);
+    this.setData({
+      month:month1,
+      day:day1,
+      number:data.data.number,
+      money:money1
+    })
+  },
+  onLoad:function(e)
+  {
+    let that = this;
     wx.request({
-      url: '192.168.199.168:3000/insurance/hbj/open', // 仅为示例，并非真实的接口地址
+      url: 'http://office.5ftech.com:30001/insurance/hbj/info', // 仅为示例，并非真实的接口地址
       data: {
         
       },
+      method:'GET',
       header: {
         'content-type': 'application/json' // 默认值
       },
       success(res) {
-        console.log(res.data)
+        that.load_data(res.data);
       }
   })
   }

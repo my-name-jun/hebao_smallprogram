@@ -4,13 +4,13 @@
 
   <view class='top_title'>中国移动和支付的红包</view>
   <view class='price'>10.00<text class='unit'>元</text></view>
-  <view class='content'>已存入您的账户，有效期至12月22日</view>
+  <view class='content'>已存入您的账户，有效期至{{month}}月{{day}}日</view>
   <view class='submit_button' bindtap='bindViewTap'>查看并激活账户</view>
   <view class='footer_words'>
-    <text class='number'>10988</text>
+    <text class='number'>{{number}}</text>
     人已领取
     <text class='line'>|</text>
     还剩
-    <text class='number'>￥800,086.00</text>
+    <text class='number'>￥{{money}}</text>
   </view>
 </view>
